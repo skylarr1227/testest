@@ -1,0 +1,81 @@
+{
+  "addons": [
+    "logdna",
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/challengee/heroku-buildpack-libsodium"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "https://github.com/dubsmash/heroku-buildpack-opus.git"
+    },
+    {
+      "url": "https://github.com/appositum/heroku-buildpack-youtube-dl.git"
+    },
+    {
+      "url": "https://github.com/ScarletKuro/dotnetcore-buildpackv2.1.git"
+    }
+  ],
+  "description": "",
+  "env": {
+    "LOGDNA_KEY": {
+      "required": true
+    },
+    "REDIS_URL": {
+      "required": true
+    },
+    "SELFBOT_BOTLISTTOKEN": {
+      "required": true
+    },
+    "SELFBOT_CLIENTID": "528645964194381825",
+    "SELFBOT_MININGPROXYCRED": {
+      "required": true
+    },
+    "SELFBOT_MININGPROXYURL": {
+      "required": true
+    },
+    "SELFBOT_OWNEDIDS": "474104220770107392",
+    "SELFBOT_PATREONACCESSTOKEN": {
+      "required": true
+    },
+    "SELFBOT_PATREONCAMPAIGNID": {
+      "required": true
+    },
+    "SELFBOT_SHARDRUNARGUMENTS": {
+      "required": true
+    },
+    "SELFBOT_SHARDRUNCOMMAND": {
+      "required": true
+    },
+    "SELFBOT_SHARDRUNPORT": {
+      "required": true
+    },
+    "SELFBOT_TOKEN": "NTI4NjQ1OTY0MTk0MzgxODI1.D09bkA.UQKYsArD2ryL2ZNuug-cBONLCEs",
+    "SELFBOT_TOTALSHARDS": {
+      "required": true
+    },
+    "SELFBOT_TWITCHCLIENTID": {
+      "required": true
+    },
+    "SELFBOT_VOTETOKEN": {
+      "required": true
+    },
+    "SELFBOT_VOTEURL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "name": "testest",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
